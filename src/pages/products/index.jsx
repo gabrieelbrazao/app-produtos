@@ -5,7 +5,6 @@ import {
   Grid,
   InputLabel,
   MenuItem,
-  Select,
   TextField,
   Typography,
 } from "@material-ui/core";
@@ -19,6 +18,7 @@ import {
   TitleClientData,
   Footer,
   TotalValue,
+  GenderSelect,
 } from "./styles";
 
 export default function products() {
@@ -81,10 +81,9 @@ export default function products() {
           <FormControl variant="outlined" fullWidth>
             <InputLabel>Sexo</InputLabel>
 
-            <Select
+            <GenderSelect
               value={gender}
               label="Sexo"
-              style={gender === 0 ? { color: "#BCBCBC" } : {}}
               onChange={(event) => setGender(event.target.value)}
             >
               <MenuItem value={0} disabled>
@@ -94,7 +93,7 @@ export default function products() {
               <MenuItem value={1}>Masculino</MenuItem>
               <MenuItem value={2}>Feminino</MenuItem>
               <MenuItem value={3}>Outro</MenuItem>
-            </Select>
+            </GenderSelect>
           </FormControl>
         </Grid>
       </Grid>

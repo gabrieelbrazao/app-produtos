@@ -86,5 +86,5 @@ export const IconAdd = styled(Add)`
 
 export const AddButton = styled(Button)`
   grid-column: 1 / 4;
-  margin-top: 12px;
+  margin-top: 12px !important;
 `;
