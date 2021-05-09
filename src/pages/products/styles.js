@@ -28,6 +28,6 @@ export const Footer = styled.div`
 `;
 
 export const TotalValue = styled(Typography)`
-  margin-bottom: 16px;
-  font-weight: bold;
+  margin-bottom: 16px !important;
+  font-weight: bold !important;
 `;

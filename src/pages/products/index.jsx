@@ -100,7 +100,9 @@ export default function products() {
       </Grid>
 
       <Footer>
-        <TotalValue variant="h1">Total: R$ 299,00</TotalValue>
+        <TotalValue variant="h1" align="right">
+          Total: R$ 299,00
+        </TotalValue>
 
         <Button variant="contained" color="secondary">
           finalizar compra

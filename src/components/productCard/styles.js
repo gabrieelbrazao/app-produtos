@@ -45,11 +45,11 @@ export const Description = styled.div`
 `;
 
 export const ProductNameText = styled(Typography)`
-  margin-top: 12px;
+  margin-top: 12px !important;
 `;
 
 export const ProductValueText = styled(Typography)`
-  margin: 12px 0;
+  margin: 12px 0 !important;
 `;
 
 export const Actions = styled.div`
