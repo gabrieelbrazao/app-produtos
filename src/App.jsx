@@ -1,15 +1,17 @@
 import React from "react";
+import { Provider } from "react-redux";
 import { ThemeProvider } from "@material-ui/core/styles";
-// import Completion from "./pages/completion";
-import Products from "./pages/products";
-import "./global/styles/index.css";
+import store from "./store";
 import theme from "./global/theme";
+import Routes from "./routes/index";
+import "./global/styles/index.css";
 
 export default function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <Products />
-      {/* <Completion /> */}
-    </ThemeProvider>
+    <Provider store={store}>
+      <ThemeProvider theme={theme}>
+        <Routes />
+      </ThemeProvider>
+    </Provider>
   );
 }

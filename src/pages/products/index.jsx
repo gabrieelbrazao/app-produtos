@@ -5,11 +5,15 @@ import {
   Grid,
   InputLabel,
   MenuItem,
+  Popover,
   TextField,
   Typography,
 } from "@material-ui/core";
 import React, { useState } from "react";
 import uuid from "react-uuid";
+import { useDispatch, useSelector } from "react-redux";
+import { useHistory } from "react-router-dom";
+import parseValueToBrl from "../../utils";
 import ProductCard from "../../components/productCard";
 import data from "./data.json";
 import {
@@ -19,10 +23,26 @@ import {
   Footer,
   TotalValue,
   GenderSelect,
+  PopoverText,
 } from "./styles";
 
 export default function products() {
   const [gender, setGender] = useState(0);
+  const [openPopover, setOpenPopover] = useState(false);
+  const [anchorEl, setAnchorEl] = useState(null);
+  const { TOTAL_VALUE } = useSelector((state) => state);
+  const dispatch = useDispatch();
+  const history = useHistory();
+
+  const handleFinishPurchase = (event) => {
+    if (TOTAL_VALUE === 0) {
+      setAnchorEl(event.currentTarget);
+      setOpenPopover(true);
+      return;
+    }
+
+    history.replace("/completion");
+  };
 
   return (
     <Container>
@@ -62,6 +82,9 @@ export default function products() {
             label="Nome"
             variant="outlined"
             placeholder="Nome do cliente aqui"
+            onBlur={(event) =>
+              dispatch({ type: "SET_CLIENT_NAME", name: event.target.value })
+            }
           />
         </Grid>
 
@@ -100,12 +123,32 @@ export default function products() {
 
       <Footer>
         <TotalValue variant="h1" align="right">
-          Total: R$ 299,00
+          Total: {parseValueToBrl(TOTAL_VALUE)}
         </TotalValue>
 
-        <Button variant="contained" color="secondary">
+        <Button
+          variant="contained"
+          color="secondary"
+          onClick={(event) => handleFinishPurchase(event)}
+        >
           finalizar compra
         </Button>
+
+        <Popover
+          open={openPopover}
+          onClose={() => setOpenPopover(false)}
+          anchorEl={anchorEl}
+          anchorOrigin={{
+            vertical: "top",
+            horizontal: "left",
+          }}
+          transformOrigin={{
+            vertical: "bottom",
+            horizontal: "center",
+          }}
+        >
+          <PopoverText>Por favor, adicione algum item ao carrinho.</PopoverText>
+        </Popover>
       </Footer>
     </Container>
   );

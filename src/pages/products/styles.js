@@ -35,3 +35,7 @@ export const TotalValue = styled(Typography)`
   margin-bottom: 16px !important;
   font-weight: bold !important;
 `;
+
+export const PopoverText = styled(Typography)`
+  padding: 12px;
+`;

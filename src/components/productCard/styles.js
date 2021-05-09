@@ -68,7 +68,7 @@ export const Actions = styled.div`
 `;
 
 export const QuantityButton = styled(Avatar)`
-  background-color: #ccd4d8;
+  background-color: #ccd4d8 !important;
   cursor: pointer;
 `;
 

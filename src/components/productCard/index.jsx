@@ -1,5 +1,7 @@
 import { Typography } from "@material-ui/core";
 import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import parseValueToBrl from "../../utils";
 import {
   Card,
   Description,
@@ -16,12 +18,16 @@ import {
 
 export default function productCard({ data }) {
   const [quantity, setQuantity] = useState(0);
+  const { TOTAL_VALUE } = useSelector((state) => state);
+  const dispatch = useDispatch();
 
-  const parseValueToBrl = (number) =>
-    new Intl.NumberFormat("pt-BR", {
-      style: "currency",
-      currency: "BRL",
-    }).format(number);
+  const handleAddProduct = () => {
+    if (quantity === 0) return;
+
+    const newValue = TOTAL_VALUE + data.value * quantity;
+
+    dispatch({ type: "SET_TOTAL_VALUE", value: newValue });
+  };
 
   return (
     <Card elevation={0}>
@@ -64,7 +70,11 @@ export default function productCard({ data }) {
             <IconAdd />
           </QuantityButton>
 
-          <AddButton variant="contained" color="primary">
+          <AddButton
+            variant="contained"
+            color="primary"
+            onClick={() => handleAddProduct()}
+          >
             adicionar
           </AddButton>
         </Actions>
