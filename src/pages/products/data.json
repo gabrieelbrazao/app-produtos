@@ -1,0 +1,42 @@
+[
+  {
+    "image": "produto-01.jpeg",
+    "name": "AirPods Apple Fones de ouvido",
+    "value": 1499
+  },
+  {
+    "image": "produto-02.jpeg",
+    "name": "Capa de silicone para iPhone 8/7 cor Areia - rosa",
+    "value": 299
+  },
+  {
+    "image": "produto-03.jpeg",
+    "name": "Apple Pencil",
+    "value": 729
+  },
+  {
+    "image": "produto-04.jpeg",
+    "name": "Magic mouse 2 - Prateado",
+    "value": 549
+  },
+  {
+    "image": "produto-05.jpeg",
+    "name": "Caixa prateada de alumínio com pulseira esportiva branca",
+    "value": 2899
+  },
+  {
+    "image": "produto-06.jpeg",
+    "name": "Cabo de lightning para USB (1m)",
+    "value": 149
+  },
+  {
+    "image": "produto-07.jpeg",
+    "name": "Smart Keyboard para iPad Pro 12,9 polegadas - inglês (EUA)",
+    "value": 1099
+  },
+  {
+    "image": "produto-08.jpeg",
+    "name": "Carregador USB de 5W Apple",
+    "value": 149
+  }
+]
