@@ -14,7 +14,7 @@ Para a execução do site, siga estes passos:
 yarn
 ```
 
-4. Finalmente, execute o seguinte comando para inicializar o servidor Nodejs, após compilado e iniciado, será aberta uma nova guia em seu navegador exibindo o site.
+3. Finalmente, execute o seguinte comando para inicializar o servidor Nodejs, após compilado e iniciado, será aberta uma nova guia em seu navegador exibindo o site.
 
 ```
 yarn start
