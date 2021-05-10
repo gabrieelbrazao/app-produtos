@@ -14,7 +14,13 @@ Para a execução do site, siga estes passos:
 yarn
 ```
 
-3. Finalmente, execute o seguinte comando para inicializar o servidor Nodejs, após compilado e iniciado, será aberta uma nova guia em seu navegador exibindo o site.
+3. Execute o seguinte comando para inicializar o lint do código e não haver avisos no log:
+
+```
+yarn lint
+```
+
+4. Finalmente, execute o seguinte comando para inicializar o servidor Nodejs, após compilado e iniciado, será aberta uma nova guia em seu navegador exibindo o site.
 
 ```
 yarn start
