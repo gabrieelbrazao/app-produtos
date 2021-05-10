@@ -13,6 +13,10 @@ module.exports = {
   },
   plugins: ["react", "prettier"],
   rules: {
-    "prettier/prettier": "error",
+    "prettier/prettier": "warn",
+    "react/jsx-props-no-spreading": "off",
+    "consistent-return": "off",
+    "import/prefer-default-export": "off",
+    "no-unused-vars": "warn",
   },
 };

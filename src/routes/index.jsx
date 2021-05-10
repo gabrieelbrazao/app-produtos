@@ -10,7 +10,7 @@ import Products from "../pages/products";
 import Completion from "../pages/completion";
 
 export default function Routes() {
-  const { CLIENT_NAME } = useSelector((state) => state);
+  const { CLIENT_NAME } = useSelector((state) => state.main);
 
   return (
     <Router>

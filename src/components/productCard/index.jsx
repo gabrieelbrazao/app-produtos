@@ -1,7 +1,7 @@
 import { Typography } from "@material-ui/core";
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import parseValueToBrl from "../../utils";
+import parseValueToBrl from "../../utils/parseValue";
 import {
   Card,
   Description,
@@ -18,7 +18,7 @@ import {
 
 export default function productCard({ data }) {
   const [quantity, setQuantity] = useState(0);
-  const { TOTAL_VALUE } = useSelector((state) => state);
+  const { TOTAL_VALUE } = useSelector((state) => state.main);
   const dispatch = useDispatch();
 
   const handleAddProduct = () => {

@@ -1,4 +1,3 @@
-import { Select, Typography } from "@material-ui/core";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -18,24 +17,4 @@ export const TitleProducts = styled.div`
 
 export const TitleClientData = styled.div`
   margin: 32px 0;
-`;
-
-export const GenderSelect = styled(Select)`
-  ${(props) => props.value === 0 && "color: #BCBCBC !important"}
-`;
-
-export const Footer = styled.div`
-  display: grid;
-  align-self: end;
-  justify-self: end;
-  margin-top: 32px;
-`;
-
-export const TotalValue = styled(Typography)`
-  margin-bottom: 16px !important;
-  font-weight: bold !important;
-`;
-
-export const PopoverText = styled(Typography)`
-  padding: 12px;
 `;

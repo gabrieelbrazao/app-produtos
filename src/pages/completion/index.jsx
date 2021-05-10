@@ -2,11 +2,11 @@ import { Typography, Button } from "@material-ui/core";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
-import parseValueToBrl from "../../utils";
+import parseValueToBrl from "../../utils/parseValue";
 import { Container, Card, ClientName, ImageContainer, Image } from "./styles";
 
 export default function products() {
-  const { TOTAL_VALUE, CLIENT_NAME } = useSelector((state) => state);
+  const { TOTAL_VALUE, CLIENT_NAME } = useSelector((state) => state.main);
   const dispatch = useDispatch();
   const history = useHistory();
 
